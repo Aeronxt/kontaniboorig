@@ -6,72 +6,45 @@ import SideNav from './components/layout/SideNav';
 import Footer from './components/layout/Footer';
 import ScrollToTop from './components/layout/ScrollToTop';
 
-import HomePage from './pages/HomePage';
-import BanksPage from './pages/BanksPage';
-import LoansPage from './pages/LoansPage';
-import CardsPage from './pages/CardsPage';
-import CardDetailsPage from './pages/CardDetailsPage';
-import HomeLoansPage from './pages/HomeLoansPage';
-import PhonePlansPage from './pages/PhonePlansPage';
-import InsurancePage from './pages/InsurancePage';
-import AboutPage from './pages/AboutPage';
-import AdminPortalPage from './pages/AdminPortalPage';
-import AdminLoginPage from './pages/AdminLoginPage';
-import MobilePaymentsPage from './pages/MobilePaymentsPage';
-import MobilePaymentDetailsPage from './pages/MobilePaymentDetailsPage';
-import BroadbandComparePage from './pages/BroadbandComparePage';
-import CreditScorePage from './pages/CreditScorePage';
-import BankAccountsPage from './pages/BankAccountsPage';
-import PersonalLoansPage from './pages/PersonalLoansPage';
-import CarLoansPage from './pages/CarLoansPage';
-import SavingsAccountsPage from './pages/SavingsAccountsPage';
-import PartnerWithUsPage from './pages/PartnerWithUsPage';
-import ContactPage from './pages/ContactPage';
-import InvestWithUsPage from './pages/InvestWithUsPage';
-import HowWeMakeMoneyPage from './pages/HowWeMakeMoneyPage';
-import MobilePlansPage from './pages/MobilePlansPage';
-import GetALoanPage from './pages/GetALoanPage';
-import CalculatorPage from './pages/CalculatorPage';
-import ReviewsPage from './pages/ReviewsPage';
-import CareersPage from './pages/Careers';
-import TermsOfServicePage from './pages/TermsOfServicePage';
-import ForBanks from './pages/ForBanks';
-import BankLoginPage from './pages/BankLoginPage';
-import SearchResultsPage from './pages/SearchResultsPage';
-import BestRatesFinderPage from './pages/BestRatesFinderPage';
-import HRLoginPage from './pages/HRLoginPage';
-import HRPage from './pages/HRPage';
-import ESPLoginPage from './pages/ESPLoginPage';
-import ESPPage from './pages/ESPPage';
-import NewsPage from './pages/NewsPage';
 import ArticleDetailPage from './pages/ArticleDetailPage';
-import MediaPage from './pages/MediaPage';
-import ProtectedRoute from './components/ProtectedRoute';
-import HRProtectedRoute from './components/HRProtectedRoute';
-import ESPProtectedRoute from './components/ESPProtectedRoute';
-import { AnimatePresence } from 'framer-motion';
-import SuitePage from './pages/SuitePage';
-import LoginPage from './pages/LoginPage';
-import EntertainmentPage from './pages/EntertainmentPage';
-import InstantBankPage from './pages/InstantBankPage';
+import BankAccountsPage from './pages/BankAccountsPage';
+import BestRatesFinderPage from './pages/BestRatesFinderPage';
 import BOGOPage from './pages/BOGOPage';
-import ProfilePage from './pages/ProfilePage';
-import MyDashPage from './pages/MyDashPage';
+import BroadbandComparePage from './pages/BroadbandComparePage';
+import CalculatorPage from './pages/CalculatorPage';
+import CardDetailsPage from './pages/CardDetailsPage';
+import CardsPage from './pages/CardsPage';
+import Careers from './pages/Careers';
+import CarLoansPage from './pages/CarLoansPage';
+import ContactPage from './pages/ContactPage';
+import CreditScorePage from './pages/CreditScorePage';
+import EntertainmentPage from './pages/EntertainmentPage';
+import GetALoanPage from './pages/GetALoanPage';
+import HomeLoansPage from './pages/HomeLoansPage';
+import HomePage from './pages/HomePage';
+import HowWeMakeMoneyPage from './pages/HowWeMakeMoneyPage';
+import InstantBankPage from './pages/InstantBankPage';
+import InsurancePage from './pages/InsurancePage';
+import InvestWithUsPage from './pages/InvestWithUsPage';
+import LoansPage from './pages/LoansPage';
+import MediaPage from './pages/MediaPage';
+import MobilePaymentDetailsPage from './pages/MobilePaymentDetailsPage';
+import MobilePaymentsPage from './pages/MobilePaymentsPage';
+import MobilePlansPage from './pages/MobilePlansPage';
+import NewsPage from './pages/NewsPage';
+import PartnerWithUsPage from './pages/PartnerWithUsPage';
+import PersonalLoansPage from './pages/PersonalLoansPage';
+import PhonePlansPage from './pages/PhonePlansPage';
+import ReviewsPage from './pages/ReviewsPage';
+import SavingsAccountsPage from './pages/SavingsAccountsPage';
+import SearchResultsPage from './pages/SearchResultsPage';
+import TermsOfServicePage from './pages/TermsOfServicePage';
+import ProtectedRoute from './components/ProtectedRoute';
+import { AnimatePresence } from 'framer-motion';
 
 function AppLayout() {
   const location = useLocation();
-  const hideNavAndFooter = location.pathname === '/admin-login' || 
-                          location.pathname === '/admin' || 
-                          location.pathname === '/bank-login' ||
-                          location.pathname === '/for-banks' ||
-                          location.pathname === '/hr-login' ||
-                          location.pathname === '/hr' ||
-                          location.pathname === '/esp-login' ||
-                          location.pathname === '/esp' ||
-                          location.pathname === '/suite' ||
-                          location.pathname === '/login' ||
-                          location.pathname === '/mydash' ||
-                          location.pathname.startsWith('/news/');
+  const hideNavAndFooter = location.pathname.startsWith('/news/');
   
   return (
     <div className="flex">
@@ -85,11 +58,10 @@ function AppLayout() {
               <Route path="/home" element={<HomePage />} />
               <Route path="/search" element={<SearchResultsPage />} />
               <Route path="/best-rates-finder" element={<BestRatesFinderPage />} />
-              <Route path="/banks" element={<BanksPage />} />
               <Route path="/loans" element={<LoansPage />} />
               <Route path="/get-a-loan" element={<GetALoanPage />} />
-                      <Route path="/credit-cards" element={<CardsPage />} />
-        <Route path="/credit-cards/:id" element={<CardDetailsPage />} />
+              <Route path="/credit-cards" element={<CardsPage />} />
+              <Route path="/credit-cards/:id" element={<CardDetailsPage />} />
               <Route path="/instant-bank" element={<InstantBankPage />} />
               <Route path="/home-loans" element={<HomeLoansPage />} />
               <Route path="/personal-loans" element={<PersonalLoansPage />} />
@@ -100,7 +72,6 @@ function AppLayout() {
               <Route path="/insurance" element={<InsurancePage />} />
               <Route path="/news" element={<NewsPage />} />
               <Route path="/news/:id" element={<ArticleDetailPage />} />
-              <Route path="/login" element={<LoginPage />} />
               <Route 
                 path="/media" 
                 element={
@@ -109,9 +80,6 @@ function AppLayout() {
                   </ProtectedRoute>
                 } 
               />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/admin" element={<AdminPortalPage />} />
-              <Route path="/admin-login" element={<AdminLoginPage />} />
               <Route path="/mobile-payments" element={<MobilePaymentsPage />} />
               <Route path="/mobile-payments/:id" element={<MobilePaymentDetailsPage />} />
               <Route path="/broadband" element={<BroadbandComparePage />} />
@@ -125,38 +93,8 @@ function AppLayout() {
               <Route path="/terms-of-service" element={<TermsOfServicePage />} />
               <Route path="/calculator" element={<CalculatorPage />} />
               <Route path="/reviews" element={<ReviewsPage />} />
-              <Route path="/careers" element={<CareersPage />} />
-              <Route path="/bank-login" element={<BankLoginPage />} />
-              <Route path="/hr-login" element={<HRLoginPage />} />
-              <Route path="/suite" element={<SuitePage />} />
-              <Route 
-                path="/hr" 
-                element={
-                  <HRProtectedRoute>
-                    <HRPage />
-                  </HRProtectedRoute>
-                } 
-              />
-              <Route path="/esp-login" element={<ESPLoginPage />} />
-              <Route 
-                path="/esp" 
-                element={
-                  <ESPProtectedRoute>
-                    <ESPPage />
-                  </ESPProtectedRoute>
-                } 
-              />
-              <Route 
-                path="/for-banks" 
-                element={
-                  <ProtectedRoute>
-                    <ForBanks />
-                  </ProtectedRoute>
-                } 
-              />
+              <Route path="/careers" element={<Careers />} />
               <Route path="/bogo" element={<BOGOPage />} />
-              <Route path="/profile" element={<ProfilePage />} />
-              <Route path="/mydash" element={<MyDashPage />} />
             </Routes>
           </AnimatePresence>
         </main>
