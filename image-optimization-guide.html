@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Optimization Instructions</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; max-width: 800px; margin: 0 auto; }
+        .warning { background: #fff3cd; border: 1px solid #ffeaa7; padding: 15px; border-radius: 5px; margin: 20px 0; }
+        .success { background: #d1edff; border: 1px solid #74b9ff; padding: 15px; border-radius: 5px; margin: 20px 0; }
+        code { background: #f8f9fa; padding: 2px 6px; border-radius: 3px; font-family: monospace; }
+    </style>
+</head>
+<body>
+    <h1>🚀 Image Optimization Required</h1>
+    
+    <div class="warning">
+        <h3>⚠️ Manual Optimization Needed</h3>
+        <p>Your <strong>og-banner.png</strong> is currently <strong>1.24 MB</strong> which is causing performance issues.</p>
+    </div>
+
+    <h2>🔧 How to Optimize:</h2>
+    
+    <h3>Option 1: Online Tools (Easiest)</h3>
+    <ol>
+        <li>Go to <strong>https://tinypng.com</strong> or <strong>https://squoosh.app</strong></li>
+        <li>Upload your <code>public/og-banner.png</code></li>
+        <li>Download the compressed version</li>
+        <li>Replace the original file</li>
+        <li>Aim for <strong>under 200 KB</strong></li>
+    </ol>
+
+    <h3>Option 2: Command Line Tools</h3>
+    <p>Install ImageMagick or use online converters:</p>
+    <pre><code># Using ImageMagick (if installed)
+convert og-banner.png -quality 80 -resize 1200x630 og-banner-optimized.png
+
+# Using FFmpeg (if installed)  
+ffmpeg -i og-banner.png -vf scale=1200:630 -q:v 2 og-banner-optimized.png</code></pre>
+
+    <h3>Option 3: Create Multiple Formats</h3>
+    <p>For best performance, create these versions:</p>
+    <ul>
+        <li><code>og-banner.webp</code> (smallest, modern browsers)</li>
+        <li><code>og-banner.jpg</code> (smaller than PNG for photos)</li>
+        <li><code>og-banner.png</code> (fallback, optimized)</li>
+    </ul>
+
+    <div class="success">
+        <h3>✅ Recommended Settings:</h3>
+        <ul>
+            <li><strong>Dimensions:</strong> 1200x630px (OpenGraph standard)</li>
+            <li><strong>Quality:</strong> 80-85% for JPEG, 80% for WebP</li>
+            <li><strong>Target Size:</strong> Under 200 KB</li>
+            <li><strong>Format:</strong> WebP for modern browsers, JPEG for compatibility</li>
+        </ul>
+    </div>
+
+    <h2>🏗️ Update Your HTML</h2>
+    <p>After optimization, update your <code>index.html</code>:</p>
+    <pre><code>&lt;!-- Replace the current meta tag --&gt;
+&lt;meta property="og:image" content="https://kontanibo.com/og-banner.webp" /&gt;
+&lt;meta property="twitter:image" content="https://kontanibo.com/og-banner.webp" /&gt;
+
+&lt;!-- Add fallback support --&gt;
+&lt;picture&gt;
+  &lt;source srcset="/og-banner.webp" type="image/webp"&gt;
+  &lt;img src="/og-banner.jpg" alt="Konta Nibo - Financial Comparison" /&gt;
+&lt;/picture&gt;</code></pre>
+
+    <h2>📊 Expected Results</h2>
+    <table border="1" style="border-collapse: collapse; width: 100%;">
+        <tr style="background: #f8f9fa;">
+            <th style="padding: 10px;">Format</th>
+            <th style="padding: 10px;">Current Size</th>
+            <th style="padding: 10px;">Optimized Size</th>
+            <th style="padding: 10px;">Savings</th>
+        </tr>
+        <tr>
+            <td style="padding: 10px;">PNG (original)</td>
+            <td style="padding: 10px;">1.24 MB</td>
+            <td style="padding: 10px;">~400 KB</td>
+            <td style="padding: 10px;">~68%</td>
+        </tr>
+        <tr>
+            <td style="padding: 10px;">JPEG (optimized)</td>
+            <td style="padding: 10px;">1.24 MB</td>
+            <td style="padding: 10px;">~150 KB</td>
+            <td style="padding: 10px;">~88%</td>
+        </tr>
+        <tr>
+            <td style="padding: 10px;">WebP (modern)</td>
+            <td style="padding: 10px;">1.24 MB</td>
+            <td style="padding: 10px;">~100 KB</td>
+            <td style="padding: 10px;">~92%</td>
+        </tr>
+    </table>
+
+    <div class="warning">
+        <h3>🎯 Performance Impact</h3>
+        <p>Optimizing this image will:</p>
+        <ul>
+            <li>Reduce LCP (Largest Contentful Paint) by 500-800ms</li>
+            <li>Improve PageSpeed Insights score by 10-20 points</li>
+            <li>Save users 1+ MB of download per page load</li>
+            <li>Improve mobile performance significantly</li>
+        </ul>
+    </div>
+
+    <p><strong>After optimization, run:</strong> <code>npm run build:analyze</code> to see the improvements!</p>
+</body>
+</html>

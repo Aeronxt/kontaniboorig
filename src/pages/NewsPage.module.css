@@ -1,0 +1,234 @@
+.newsContainer {
+  @apply min-h-screen bg-[#1B1F3B] relative flex items-center justify-center;
+}
+
+.articleContainer {
+  @apply relative w-full max-w-7xl mx-auto px-4 py-12 flex items-center;
+  min-height: 80vh;
+}
+
+.articleContent {
+  @apply relative z-10 w-full;
+}
+
+.categoryTag {
+  @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-[#DEFF0A] text-black mb-4;
+}
+
+.date {
+  @apply ml-4 text-sm text-white;
+}
+
+.title {
+  @apply text-6xl font-bold text-white mb-8 max-w-3xl;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.authorSection {
+  @apply flex items-center gap-3 mt-8;
+}
+
+.authorImage {
+  @apply w-12 h-12 rounded-full overflow-hidden;
+}
+
+.authorName {
+  @apply text-sm font-medium bg-[#DEFF0A] px-4 py-2 rounded-full;
+}
+
+.navigationArrows {
+  @apply fixed right-8 flex flex-col gap-4 z-20;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.navButton {
+  @apply w-16 h-16 rounded-full bg-[#DEFF0A] flex items-center justify-center 
+         text-black transition-all duration-300 hover:bg-[#c9e600] cursor-pointer;
+}
+
+.featuredImage {
+  @apply absolute right-[-5%] top-1/2 -translate-y-1/2 w-1/2 h-[70vh] rounded-l-3xl overflow-hidden;
+}
+
+.featuredImage img {
+  @apply w-full h-full object-cover;
+}
+
+.backgroundAccent {
+  @apply absolute right-0 top-0 w-1/3 h-full bg-[#00A3FF] -z-10;
+}
+
+@media (max-width: 1024px) {
+  .title {
+    @apply text-4xl max-w-xl;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .featuredImage {
+    @apply w-1/3 right-[-3%];
+  }
+
+  .backgroundAccent {
+    @apply w-1/4;
+  }
+}
+
+@media (max-width: 768px) {
+  .articleContainer {
+    @apply flex-col;
+  }
+
+  .title {
+    @apply text-3xl;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .featuredImage {
+    @apply relative w-full h-48 rounded-xl mt-8 transform-none right-0;
+  }
+
+  .backgroundAccent {
+    @apply w-full h-1/3 bottom-0 top-auto;
+  }
+
+  .navigationArrows {
+    @apply bottom-8 right-8 top-auto flex-row transform-none;
+  }
+
+  .navButton {
+    @apply w-12 h-12;
+  }
+}
+
+.heroSection {
+  @apply mb-12 relative overflow-hidden rounded-2xl;
+  min-height: 400px;
+}
+
+.heroContent {
+  @apply absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent p-8 flex flex-col justify-end text-white;
+}
+
+.heroTitle {
+  @apply text-4xl font-bold mb-4;
+}
+
+.heroExcerpt {
+  @apply text-lg text-gray-200 mb-6 line-clamp-2;
+}
+
+.categoryBar {
+  @apply flex gap-2 mb-8 overflow-x-auto pb-2 -mx-2 px-2 scrollbar-hide;
+}
+
+.categoryButton {
+  @apply px-4 py-2 rounded-full text-sm font-medium transition-all whitespace-nowrap;
+}
+
+.categoryButtonActive {
+  @apply bg-blue-600 text-white shadow-lg shadow-blue-600/25;
+}
+
+.categoryButtonInactive {
+  @apply bg-gray-100 text-gray-700 hover:bg-gray-200;
+}
+
+.searchBar {
+  @apply relative mb-8;
+}
+
+.searchInput {
+  @apply w-full pl-12 pr-4 py-3 rounded-xl bg-gray-100 border-2 border-transparent focus:border-blue-600 focus:bg-white transition-all outline-none;
+}
+
+.searchIcon {
+  @apply absolute left-4 top-1/2 -translate-y-1/2 text-gray-400;
+}
+
+.articlesGrid {
+  @apply grid gap-6;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.articleCard {
+  @apply bg-white rounded-xl overflow-hidden border border-gray-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+}
+
+.articleImage {
+  @apply w-full aspect-[16/9] object-cover;
+}
+
+.articleTitle {
+  @apply text-xl font-bold mb-3 line-clamp-2 text-gray-900;
+}
+
+.articleExcerpt {
+  @apply text-gray-600 mb-4 line-clamp-3;
+}
+
+.articleMeta {
+  @apply flex items-center gap-4 text-sm text-gray-500;
+}
+
+.metaItem {
+  @apply flex items-center gap-1;
+}
+
+.interactionBar {
+  @apply flex items-center justify-between mt-4 pt-4 border-t border-gray-100;
+}
+
+.interactionButton {
+  @apply flex items-center gap-1 text-sm text-gray-600 hover:text-blue-600 transition-colors;
+}
+
+.likeButton {
+  @apply text-sm font-medium flex items-center gap-1 transition-all;
+}
+
+.likeButtonActive {
+  @apply text-red-600;
+}
+
+.loadingSkeleton {
+  @apply animate-pulse bg-gray-200 rounded;
+}
+
+.loadingCard {
+  @apply bg-white rounded-xl overflow-hidden border border-gray-200 p-4;
+}
+
+.loadingImage {
+  @apply w-full aspect-[16/9] rounded-lg mb-4 loadingSkeleton;
+}
+
+.loadingTitle {
+  @apply h-6 w-3/4 mb-3 loadingSkeleton;
+}
+
+.loadingExcerpt {
+  @apply space-y-2;
+}
+
+.loadingLine {
+  @apply h-4 w-full loadingSkeleton;
+}
+
+.loadingMeta {
+  @apply flex gap-4 mt-4;
+}
+
+.loadingMetaItem {
+  @apply h-4 w-16 loadingSkeleton;
+}
+
+/* Hide scrollbar but keep functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+} 

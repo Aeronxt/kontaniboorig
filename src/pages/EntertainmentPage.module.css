@@ -1,0 +1,121 @@
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.carouselContainer {
+  overflow: hidden;
+}
+
+.animateCarousel {
+  animation: scroll 30s linear infinite;
+}
+
+.animateCarousel:hover {
+  animation-play-state: paused;
+}
+
+/* Entertainment Plan Card Styles */
+.entertainmentPlanCard {
+  @apply bg-white border rounded-lg overflow-hidden;
+}
+
+.promotedTag {
+  @apply bg-yellow-400 text-xs font-medium px-3 py-1;
+}
+
+.cardHeader {
+  @apply p-4 border-b border-gray-200;
+}
+
+.cardContent {
+  @apply p-4;
+}
+
+.providerLogo {
+  @apply w-full h-full object-contain;
+}
+
+.planName {
+  @apply text-sm font-semibold text-[#1B1F3B];
+}
+
+.providerName {
+  @apply text-xs text-gray-500;
+}
+
+.priceTag {
+  @apply text-2xl font-bold text-[#1B1F3B];
+}
+
+.priceSubtext {
+  @apply text-xs text-gray-500;
+}
+
+.planFeatures {
+  @apply space-y-2 mb-4;
+}
+
+.featureItem {
+  @apply flex items-center gap-2 text-sm text-gray-600;
+}
+
+.planTags {
+  @apply flex flex-wrap gap-2 mb-4;
+}
+
+.tag {
+  @apply bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded;
+}
+
+.actionButtons {
+  @apply flex flex-col gap-2;
+}
+
+.primaryButton {
+  @apply bg-[#1A1F36] text-white px-4 py-2 rounded text-sm font-medium hover:bg-[#2d325f] transition text-center;
+}
+
+.secondaryButton {
+  @apply flex items-center justify-center gap-1 text-blue-600 text-sm font-medium hover:text-blue-700 transition;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .cardHeader {
+    @apply p-3;
+  }
+
+  .cardContent {
+    @apply p-3;
+  }
+
+  .planName {
+    @apply text-xs;
+  }
+
+  .providerName {
+    @apply text-[10px];
+  }
+
+  .priceTag {
+    @apply text-xl;
+  }
+
+  .featureItem {
+    @apply text-xs;
+  }
+
+  .tag {
+    @apply text-[10px] px-1.5 py-0.5;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    @apply text-xs py-1.5;
+  }
+} 

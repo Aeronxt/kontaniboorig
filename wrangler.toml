@@ -1,0 +1,20 @@
+name = "kontanibo"
+type = "webpack"
+account_id = "" # You'll need to add your Cloudflare account ID here
+workers_dev = true
+compatibility_date = "2025-05-07"
+main = "workers-site/index.js"
+
+[site]
+bucket = "./dist"
+
+# This is necessary for static site deployments
+[build]
+command = "npm run build:cf"
+cwd = "."
+
+# Removed assets section as it conflicts with site configuration 
+
+[env.production]
+workers_dev = false # Disable workers.dev on production
+route = "kontanibo.com/*" # Production domain route 

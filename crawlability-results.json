@@ -1,0 +1,314 @@
+{
+  "timestamp": "2025-06-24T06:41:27.942Z",
+  "robotsTxt": {
+    "localExists": true,
+    "localContent": "User-agent: *\nAllow: /\nSitemap: https://kontanibo.com/sitemap.xml\n",
+    "remoteAccessible": true,
+    "remoteStatusCode": 200,
+    "remoteContent": "User-agent: *\nAllow: /\nSitemap: https://kontanibo.com/sitemap.xml ",
+    "contentMatch": true,
+    "sitemapListed": true,
+    "sitemapUrl": "https://kontanibo.com/sitemap.xml",
+    "disallowedPaths": [],
+    "issues": []
+  },
+  "sitemap": {
+    "localExists": true,
+    "urlCount": 24,
+    "urls": [
+      "https://kontanibo.com/",
+      "https://kontanibo.com/banks",
+      "https://kontanibo.com/loans",
+      "https://kontanibo.com/get-a-loan",
+      "https://kontanibo.com/cards",
+      "https://kontanibo.com/home-loans",
+      "https://kontanibo.com/personal-loans",
+      "https://kontanibo.com/phone-plans",
+      "https://kontanibo.com/mobile-plans",
+      "https://kontanibo.com/insurance",
+      "https://kontanibo.com/about",
+      "https://kontanibo.com/mobile-payments",
+      "https://kontanibo.com/broadband",
+      "https://kontanibo.com/credit-score",
+      "https://kontanibo.com/bank-accounts",
+      "https://kontanibo.com/savings-accounts",
+      "https://kontanibo.com/partner-with-us",
+      "https://kontanibo.com/contact",
+      "https://kontanibo.com/invest-with-us",
+      "https://kontanibo.com/how-we-make-money",
+      "https://kontanibo.com/terms-of-service",
+      "https://kontanibo.com/calculator",
+      "https://kontanibo.com/reviews",
+      "https://kontanibo.com/careers"
+    ],
+    "remoteAccessible": true,
+    "remoteStatusCode": 200,
+    "validXml": true,
+    "httpsUrls": 24,
+    "httpUrls": 0,
+    "under50k": true,
+    "urlStatuses": {
+      "https://kontanibo.com/": {
+        "url": "https://kontanibo.com/",
+        "status": 200,
+        "accessible": true,
+        "redirected": false
+      },
+      "https://kontanibo.com/banks": {
+        "url": "https://kontanibo.com/banks",
+        "status": 200,
+        "accessible": true,
+        "redirected": false
+      },
+      "https://kontanibo.com/loans": {
+        "url": "https://kontanibo.com/loans",
+        "status": 200,
+        "accessible": true,
+        "redirected": false
+      },
+      "https://kontanibo.com/get-a-loan": {
+        "url": "https://kontanibo.com/get-a-loan",
+        "status": 200,
+        "accessible": true,
+        "redirected": false
+      },
+      "https://kontanibo.com/cards": {
+        "url": "https://kontanibo.com/cards",
+        "status": 200,
+        "accessible": true,
+        "redirected": false
+      },
+      "https://kontanibo.com/home-loans": {
+        "url": "https://kontanibo.com/home-loans",
+        "status": 200,
+        "accessible": true,
+        "redirected": false
+      },
+      "https://kontanibo.com/personal-loans": {
+        "url": "https://kontanibo.com/personal-loans",
+        "status": 200,
+        "accessible": true,
+        "redirected": false
+      },
+      "https://kontanibo.com/phone-plans": {
+        "url": "https://kontanibo.com/phone-plans",
+        "status": 200,
+        "accessible": true,
+        "redirected": false
+      },
+      "https://kontanibo.com/mobile-plans": {
+        "url": "https://kontanibo.com/mobile-plans",
+        "status": 200,
+        "accessible": true,
+        "redirected": false
+      },
+      "https://kontanibo.com/insurance": {
+        "url": "https://kontanibo.com/insurance",
+        "status": 200,
+        "accessible": true,
+        "redirected": false
+      },
+      "https://kontanibo.com/about": {
+        "url": "https://kontanibo.com/about",
+        "status": 200,
+        "accessible": true,
+        "redirected": false
+      },
+      "https://kontanibo.com/mobile-payments": {
+        "url": "https://kontanibo.com/mobile-payments",
+        "status": 200,
+        "accessible": true,
+        "redirected": false
+      },
+      "https://kontanibo.com/broadband": {
+        "url": "https://kontanibo.com/broadband",
+        "status": 200,
+        "accessible": true,
+        "redirected": false
+      },
+      "https://kontanibo.com/credit-score": {
+        "url": "https://kontanibo.com/credit-score",
+        "status": 200,
+        "accessible": true,
+        "redirected": false
+      },
+      "https://kontanibo.com/bank-accounts": {
+        "url": "https://kontanibo.com/bank-accounts",
+        "status": 200,
+        "accessible": true,
+        "redirected": false
+      },
+      "https://kontanibo.com/savings-accounts": {
+        "url": "https://kontanibo.com/savings-accounts",
+        "status": 200,
+        "accessible": true,
+        "redirected": false
+      },
+      "https://kontanibo.com/partner-with-us": {
+        "url": "https://kontanibo.com/partner-with-us",
+        "status": 200,
+        "accessible": true,
+        "redirected": false
+      },
+      "https://kontanibo.com/contact": {
+        "url": "https://kontanibo.com/contact",
+        "status": 200,
+        "accessible": true,
+        "redirected": false
+      },
+      "https://kontanibo.com/invest-with-us": {
+        "url": "https://kontanibo.com/invest-with-us",
+        "status": 200,
+        "accessible": true,
+        "redirected": false
+      },
+      "https://kontanibo.com/how-we-make-money": {
+        "url": "https://kontanibo.com/how-we-make-money",
+        "status": 200,
+        "accessible": true,
+        "redirected": false
+      },
+      "https://kontanibo.com/terms-of-service": {
+        "url": "https://kontanibo.com/terms-of-service",
+        "status": 200,
+        "accessible": true,
+        "redirected": false
+      },
+      "https://kontanibo.com/calculator": {
+        "url": "https://kontanibo.com/calculator",
+        "status": 200,
+        "accessible": true,
+        "redirected": false
+      },
+      "https://kontanibo.com/reviews": {
+        "url": "https://kontanibo.com/reviews",
+        "status": 200,
+        "accessible": true,
+        "redirected": false
+      },
+      "https://kontanibo.com/careers": {
+        "url": "https://kontanibo.com/careers",
+        "status": 200,
+        "accessible": true,
+        "redirected": false
+      }
+    },
+    "issues": []
+  },
+  "coreWebVitals": {
+    "pages": {
+      "/": {
+        "url": "https://kontanibo.com/",
+        "loadTime": 24,
+        "status": 200,
+        "note": "Basic timing only - set PAGESPEED_API_KEY for detailed metrics"
+      },
+      "/cards": {
+        "url": "https://kontanibo.com/cards",
+        "loadTime": 33,
+        "status": 200,
+        "note": "Basic timing only - set PAGESPEED_API_KEY for detailed metrics"
+      },
+      "/loans": {
+        "url": "https://kontanibo.com/loans",
+        "loadTime": 33,
+        "status": 200,
+        "note": "Basic timing only - set PAGESPEED_API_KEY for detailed metrics"
+      },
+      "/banks": {
+        "url": "https://kontanibo.com/banks",
+        "loadTime": 31,
+        "status": 200,
+        "note": "Basic timing only - set PAGESPEED_API_KEY for detailed metrics"
+      },
+      "/mobile-plans": {
+        "url": "https://kontanibo.com/mobile-plans",
+        "loadTime": 29,
+        "status": 200,
+        "note": "Basic timing only - set PAGESPEED_API_KEY for detailed metrics"
+      },
+      "/insurance": {
+        "url": "https://kontanibo.com/insurance",
+        "loadTime": 46,
+        "status": 200,
+        "note": "Basic timing only - set PAGESPEED_API_KEY for detailed metrics"
+      }
+    },
+    "summary": {},
+    "apiUsed": false
+  },
+  "canonicalTags": {
+    "pages": {
+      "/": {
+        "url": "https://kontanibo.com/",
+        "hasCanonical": true,
+        "canonicalUrl": "https://kontanibo.com/",
+        "status": 200
+      },
+      "/cards": {
+        "url": "https://kontanibo.com/cards",
+        "hasCanonical": true,
+        "canonicalUrl": "https://kontanibo.com/",
+        "status": 200
+      },
+      "/loans": {
+        "url": "https://kontanibo.com/loans",
+        "hasCanonical": true,
+        "canonicalUrl": "https://kontanibo.com/",
+        "status": 200
+      },
+      "/banks": {
+        "url": "https://kontanibo.com/banks",
+        "hasCanonical": true,
+        "canonicalUrl": "https://kontanibo.com/",
+        "status": 200
+      },
+      "/mobile-plans": {
+        "url": "https://kontanibo.com/mobile-plans",
+        "hasCanonical": true,
+        "canonicalUrl": "https://kontanibo.com/",
+        "status": 200
+      },
+      "/insurance": {
+        "url": "https://kontanibo.com/insurance",
+        "hasCanonical": true,
+        "canonicalUrl": "https://kontanibo.com/",
+        "status": 200
+      }
+    },
+    "summary": {
+      "total": 6,
+      "withCanonical": 6,
+      "missing": [],
+      "issues": []
+    }
+  },
+  "searchEnginePings": {
+    "sitemap": "https://kontanibo.com/sitemap.xml",
+    "google": {
+      "url": "https://www.google.com/ping?sitemap=https%3A%2F%2Fkontanibo.com%2Fsitemap.xml",
+      "status": 404,
+      "success": false,
+      "response": "<HTML>\n<HEAD>\n<TITLE>Sitemaps ping is deprecated. See https://developers.google.com/search/blog/2023/06/sitemaps-lastmod-ping.</TITLE>\n</HEAD>\n<BODY BGCOLOR=\"#FFFFFF\" TEXT=\"#000000\">\n<!-- GSE Default "
+    },
+    "bing": {
+      "url": "https://www.bing.com/ping?sitemap=https%3A%2F%2Fkontanibo.com%2Fsitemap.xml",
+      "status": 410,
+      "success": false,
+      "response": ""
+    }
+  },
+  "summary": {
+    "totalIssues": 2,
+    "issues": [
+      "Google sitemap ping failed (expected - use Search Console instead)",
+      "Bing sitemap ping failed (expected - use Webmaster Tools instead)"
+    ],
+    "successes": [
+      "robots.txt is properly configured",
+      "Sitemap contains 24 valid URLs",
+      "All key pages have canonical tags"
+    ],
+    "overallStatus": "ISSUES_FOUND"
+  }
+}

@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Add custom styles for headings to match the bold, modern look */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+@layer base {
+  html {
+    @apply text-gray-900 scroll-smooth;
+  }
+  
+  body {
+    @apply bg-white;
+  }
+  
+  h1 { @apply text-4xl md:text-5xl; }
+  h2 { @apply text-3xl md:text-4xl; }
+  h3 { @apply text-2xl md:text-3xl; }
+  h4 { @apply text-xl md:text-2xl; }
+  h5 { @apply text-lg md:text-xl; }
+  h6 { @apply text-base md:text-lg; }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition-all duration-200 inline-flex items-center justify-center;
+  }
+  
+  .btn-primary {
+    @apply bg-blue-600 text-white hover:bg-blue-700 focus:ring-4 focus:ring-blue-300;
+  }
+  
+  .btn-secondary {
+    @apply bg-purple-600 text-white hover:bg-purple-700 focus:ring-4 focus:ring-purple-300;
+  }
+  
+  .btn-outline {
+    @apply border border-gray-300 hover:bg-gray-50 focus:ring-4 focus:ring-gray-100;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden;
+  }
+  
+  .container-custom {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section {
+    @apply py-12 md:py-16 lg:py-20;
+  }
+  
+  .animate-fade-in {
+    @apply opacity-0;
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+  
+  .animate-slide-up {
+    @apply opacity-0 translate-y-8;
+    animation: slideUp 0.6s ease-out forwards;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.comparison-table th {
+  @apply px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider bg-gray-50;
+}
+
+.comparison-table td {
+  @apply px-4 py-4 whitespace-nowrap text-sm border-t border-gray-200;
+}
+
+.comparison-table tr:hover {
+  @apply bg-blue-50;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 rounded-full;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full hover:bg-gray-400;
+}
+
+/* Hero gradient */
+.hero-gradient {
+  background: linear-gradient(135deg, #2563EB 0%, #7C3AED 100%);
+}
+
+/* Network animation styles */
+.network-lines line {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  opacity: 0.5;
+}
+
+.animate-draw {
+  animation: draw 30s linear infinite;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Add subtle pulse effect to circles */
+[class^="animate-float-"] circle {
+  animation: pulse 3s ease-in-out infinite alternate;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+    opacity: 0.1;
+  }
+  to {
+    transform: scale(1.2);
+    opacity: 0.2;
+  }
+}
+
+/* Enhanced credit card animation styles */
+.credit-card-elements {
+  mix-blend-mode: screen;
+  will-change: transform;
+}
+
+.credit-card-elements rect,
+.credit-card-elements circle {
+  filter: blur(1px);
+  transition: all 0.3s ease;
+}
+
+.transaction-lines line {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  opacity: 0.3;
+  filter: blur(0.5px);
+}
+
+/* Add subtle glow effect to animated elements */
+[class^="animate-float-"] {
+  filter: drop-shadow(0 0 8px rgba(255,255,255,0.2));
+}
+
+/* Enhanced pulse effect for credit card elements */
+.animate-card-pulse {
+  animation: cardPulse 3s ease-in-out infinite;
+  transform-origin: center;
+  will-change: transform, opacity;
+}
+
+.animate-circle-pulse {
+  animation: circlePulse 4s ease-in-out infinite;
+  transform-origin: center;
+  will-change: transform, opacity;
+}
+
+.animate-symbol-pulse {
+  animation: symbolPulse 3s ease-in-out infinite;
+  transform-origin: center;
+  will-change: transform, opacity;
+}
+
+/* Smooth transition for all animated elements */
+.credit-card-elements > *,
+.transaction-lines > *,
+use[href="#contactless"] {
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+/* Pattern animation */
+.animate-pattern-shift {
+  animation: patternShift 20s linear infinite;
+  will-change: transform;
+}
+
+/* Enhanced line animation */
+.animate-line-fade {
+  animation: lineFade 4s ease-in-out infinite;
+  will-change: opacity, stroke-dashoffset;
+}
+
+/* Optimize performance */
+@layer utilities {
+  .gpu {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000;
+  }
+}
